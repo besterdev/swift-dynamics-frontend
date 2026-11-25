@@ -28,7 +28,7 @@
 โปรเจกต์นี้ใช้ `pnpm` เป็น Package Manager (หากคุณยังไม่มีสามารถติดตั้งได้ด้วย `npm install -g pnpm`)
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
 ### 2. รันรันโปรเจกต์สำหรับการพัฒนา (Development)

@@ -1,6 +1,6 @@
 # Feature Flag Editor
 
-Run `pnpm install --frozen-lockfile`, then `pnpm dev` from the repository root. Open `/code-challenge/feature-flag-form#feature-flag-editor`. Run `pnpm test`, `pnpm exec tsc --noEmit`, and `pnpm build` for the submission checks.
+Setup was verified with Node.js 22 and pnpm 11. Run `pnpm install --frozen-lockfile`, then `pnpm dev` from the repository root. Open `/code-challenge/feature-flag-form#feature-flag-editor`. Run `pnpm lint`, `pnpm test`, `pnpm exec tsc --noEmit`, and `pnpm build` for the submission checks.
 
 ## Targeting context
 
