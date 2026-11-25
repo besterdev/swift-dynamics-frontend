@@ -1,11 +1,11 @@
 import { useRouter } from '@tanstack/react-router'
 import type { ToOptions } from '@tanstack/react-router'
 
-import BadgeStacks, { AllowedStacks } from '#/components/features/badge-stacks'
-import type { IStackBadge } from '#/components/features/badge-stacks'
-import Header from '#/components/features/header'
+import BadgeStacks, { AllowedStacks } from '@/components/features/badge-stacks'
+import type { IStackBadge } from '@/components/features/badge-stacks'
+import Header from '@/components/features/header'
 
-import { Button } from '#/components/ui/button'
+import { Button } from '@/components/ui/button'
 
 interface IAssignment {
   id: string

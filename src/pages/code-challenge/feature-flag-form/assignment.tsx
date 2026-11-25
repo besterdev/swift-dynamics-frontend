@@ -1,5 +1,5 @@
-import Header, { HeaderAssignment } from '#/components/features/header'
-import { Separator } from '#/components/ui/separator'
+import Header, { HeaderAssignment } from '@/components/features/header'
+import { Separator } from '@/components/ui/separator'
 import YourCode from './your-codes'
 
 const FeatureFlagAssignment = () => {
@@ -14,7 +14,8 @@ const FeatureFlagAssignment = () => {
             <a
               href="https://gofeatureflag.org/editor"
               className="text-blue-500 underline ml-1"
-              target="_blank text-sm"
+              target="_blank"
+              rel="noreferrer"
             >
               GoFeatureFlag
             </a>{' '}
@@ -102,28 +103,27 @@ const FeatureFlagAssignment = () => {
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
               </div>
             </div>
-            <div className="p-6 font-mono text-sm leading-relaxed">
+            <div className="overflow-x-auto p-6 font-mono text-sm leading-relaxed">
               <pre className="text-blue-300">
-                {`{
-  "flags": {
-    "my-new-feature": {
-      "variations": {
-        "on": true,
-        "off": false
-      },
-      "targeting": [
-        {
-          "query": "group == 'beta'",
-          "percentage": 50,
-          "variation": "on"
-        }
-      ],
-      "defaultRule": {
-        "variation": "off"
-      }
-    }
-  }
-}`}
+                {JSON.stringify(
+                  {
+                    'my-new-feature': {
+                      variations: { on: true, off: false },
+                      targeting: [
+                        {
+                          name: 'Beta rollout',
+                          query: JSON.stringify({
+                            '===': [{ var: 'group' }, 'beta'],
+                          }),
+                          percentage: { on: 50, off: 50 },
+                        },
+                      ],
+                      defaultRule: { variation: 'off' },
+                    },
+                  },
+                  null,
+                  2,
+                )}
               </pre>
             </div>
           </div>

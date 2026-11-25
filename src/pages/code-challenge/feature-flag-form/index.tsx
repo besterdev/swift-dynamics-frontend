@@ -1,6 +1,6 @@
 import FeatureFlagAssignment from './assignment'
 
-function FeatureFlagForm() {
+const FeatureFlagForm = () => {
   return <FeatureFlagAssignment />
 }
 

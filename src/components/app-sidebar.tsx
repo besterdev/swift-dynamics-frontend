@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { GalleryVerticalEnd } from 'lucide-react'
 
 import { Link } from '@tanstack/react-router'
 import type { ToOptions } from '@tanstack/react-router'
@@ -39,7 +38,9 @@ const data: {
   ],
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export const AppSidebar = ({
+  ...props
+}: React.ComponentProps<typeof Sidebar>) => {
   return (
     <Sidebar {...props}>
       <SidebarHeader>

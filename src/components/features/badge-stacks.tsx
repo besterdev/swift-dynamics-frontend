@@ -1,4 +1,4 @@
-import { cn } from '#/lib/utils'
+import { cn } from '@/lib/utils'
 
 export interface IStackBadge {
   key: string
@@ -32,7 +32,7 @@ export const AllowedStacks: IStackBadge[] = [
   },
 ]
 
-function StackBadges({ stacks }: IStackBadgeProps) {
+const StackBadges = ({ stacks }: IStackBadgeProps) => {
   return (
     <div className="flex flex-wrap gap-2">
       {stacks.map((stack) => (
